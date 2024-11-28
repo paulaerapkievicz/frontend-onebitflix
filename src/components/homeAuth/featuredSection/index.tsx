@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import useSWR from "swr";
 import courseService, { CourseType } from "../../../services/courseService";
-import SwrSpinner from "../../common/swrSpinner";
+// import SwrSpinner from "../../common/swrSpinner";
 import HeaderAuth from "../../common/headerAuth";
 import { Container, Button } from 'reactstrap'
 import Link from "next/link";
