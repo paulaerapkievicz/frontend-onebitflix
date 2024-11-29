@@ -14,8 +14,7 @@ const FeaturedSection = function () {
   // if (!data) return <SwrSpinner/>;
   if (!data) return <><p>Loading...</p></>;
   return (<>
-  	{
-   data.data?.map((course: CourseType)=>(
+  	{data.data?.map((course: CourseType)=>(
     <div style={{ backgroundImage: `linear-gradient(to bottom, #6666661a, #151515),
       url(${process.env.NEXT_PUBLIC_BASEURL}/${course.thumbnailUrl})`,
       backgroundSize: "cover", backgroundPosition: "center", height: "480px" }} key={course.id}>
