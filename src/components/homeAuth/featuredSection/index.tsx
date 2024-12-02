@@ -1,18 +1,17 @@
 import styles from "./styles.module.scss";
 import useSWR from "swr";
 import courseService, { CourseType } from "../../../services/courseService";
-// import SwrSpinner from "../../common/swrSpinner";
 import HeaderAuth from "../../common/headerAuth";
 import { Container, Button } from 'reactstrap'
 import Link from "next/link";
+import PageSpinner from "../../common/spinner";
 
 
 const FeaturedSection = function () {
   const { data, error } = useSWR("/featured", courseService.getFeaturedCourses);
 
   if (error) return error;
-  // if (!data) return <SwrSpinner/>;
-  if (!data) return <><p>Loading...</p></>;
+  if (!data) return <><PageSpinner/></>;
   return (<>
   	{data.data?.map((course: CourseType)=>(
     <div style={{ backgroundImage: `linear-gradient(to bottom, #6666661a, #151515),
