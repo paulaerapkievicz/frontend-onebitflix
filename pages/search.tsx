@@ -43,7 +43,7 @@ const Search = function () {
       <div className={styles.headerFooterBg}>
         <HeaderAuth/>
       </div>
-      <div className={styles.searchResult}>
+      <div className={styles.searchContainer}>
         {loading ? (
           <PageSpinner/>
         ) : searchResult.length >= 1 ? (
@@ -53,7 +53,9 @@ const Search = function () {
           ))}
         </Container>
         ) : (
-          <p className={styles.noSearchResult}>Nenhum resultado encontrado!</p>
+          <div className={styles.searchContainer}>  
+            <p className={styles.noSearchResult}>Nenhum resultado encontrado!</p>
+          </div>
         )}
       </div>
       <div className={styles.headerFooterBg}>
