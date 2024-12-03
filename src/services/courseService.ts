@@ -132,13 +132,11 @@ const courseService = {
       },
     })
     .catch((error) => {
-      console.log(error.response.data.message);
-  
       return error.response;
     });
   
     return res;
-  },
+  }
 };
 
 export default courseService

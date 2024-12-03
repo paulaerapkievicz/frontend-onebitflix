@@ -10,7 +10,7 @@ import courseService, { CourseType } from "@/src/services/courseService";
 const CoursePage = function () {
   const [course, setCourse] = useState<CourseType>();
   const router = useRouter();
-  const {id} = router.query;
+  const { id } = router.query;
 
   const getCourse = async function () {
     if (typeof id !== "string") return;
